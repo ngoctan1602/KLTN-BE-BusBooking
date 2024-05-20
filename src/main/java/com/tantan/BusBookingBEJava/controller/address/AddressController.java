@@ -16,7 +16,7 @@ public class AddressController {
     private IAddressService iAddressService;
 
     @PostMapping("/create")
-    public ResponseEntity<BaseResponse> getWardById(@Valid @RequestBody AddressRequest addressRequest) {
+    public ResponseEntity<BaseResponse> getWardById( @RequestBody AddressRequest addressRequest) {
         iAddressService.createNewAddress(addressRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 new BaseResponse(false, HttpStatus.CREATED.value(), "Create address successfully", null)
