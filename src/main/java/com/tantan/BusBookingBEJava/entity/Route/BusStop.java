@@ -16,10 +16,10 @@ import lombok.Setter;
 public class BusStop {
     @EmbeddedId
     private BusStopId busStopId;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("idBusStation")
     private BusStation busStation;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("idRoute")
     private Route route;
     private int indexStation;
