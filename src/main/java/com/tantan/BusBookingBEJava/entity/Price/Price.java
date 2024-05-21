@@ -26,7 +26,7 @@ public class Price {
     private int value;
     private String description;
     @ManyToOne
-    @JoinColumn(name = "companyId")
+    @JoinColumn(name = "company_id")
     private Company company;
     @OneToMany(mappedBy = "price")
     private List<Bill> bills = new ArrayList<>();

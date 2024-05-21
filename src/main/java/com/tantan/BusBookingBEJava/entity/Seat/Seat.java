@@ -19,10 +19,10 @@ public class Seat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "typeSeatId")
+    @JoinColumn(name = "typeseat_id")
     private TypeSeat typeSeat;
     @ManyToOne
-    @JoinColumn(name = "busId")
+    @JoinColumn(name = "bus_id")
     private Bus bus;
     @OneToOne(mappedBy = "seat")
     private TicketItem ticketItem;

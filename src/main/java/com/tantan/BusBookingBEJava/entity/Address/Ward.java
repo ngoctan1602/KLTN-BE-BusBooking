@@ -25,7 +25,7 @@ public class Ward {
     private String vniName;
     private String fullAddress;
     @ManyToOne
-    @JoinColumn(name = "districtId")
+    @JoinColumn(name = "district_id")
     private District district ;
 
     @OneToMany(mappedBy = "ward")

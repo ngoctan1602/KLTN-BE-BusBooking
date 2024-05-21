@@ -21,7 +21,7 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "busId")
+    @JoinColumn(name = "bus_id")
     private Bus bus;
     @OneToMany(mappedBy = "ticket")
     private List<TicketItem> ticketItems = new ArrayList<>();

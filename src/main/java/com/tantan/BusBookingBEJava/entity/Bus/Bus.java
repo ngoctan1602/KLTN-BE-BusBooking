@@ -29,7 +29,7 @@ public class Bus {
     @OneToMany(mappedBy = "bus")
     private List<Seat> seatList = new ArrayList<>();
     @ManyToOne
-    @JoinColumn(name = "typeBusId")
+    @JoinColumn(name = "typebus_id")
     private TypeBus typeBus;
 
     @ManyToMany
@@ -43,6 +43,6 @@ public class Bus {
     @OneToMany(mappedBy = "bus")
     private List<Review> reviews = new ArrayList<>();
     @ManyToOne
-    @JoinColumn(name = "companyId")
+    @JoinColumn(name = "company_id")
     private Company company;
 }
