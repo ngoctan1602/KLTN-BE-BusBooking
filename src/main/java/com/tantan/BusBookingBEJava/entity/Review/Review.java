@@ -19,9 +19,9 @@ public class Review {
     @GeneratedValue
     private long id;
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_id")
     private User user;
     @ManyToOne
-    @JoinColumn(name = "busId")
+    @JoinColumn(name = "bus_id")
     private Bus bus;
 }

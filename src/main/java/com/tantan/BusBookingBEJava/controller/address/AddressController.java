@@ -17,7 +17,6 @@ public class AddressController {
     @Autowired
     private IAddressService iAddressService;
 
-
     @PostMapping("/create")
     public ResponseEntity<BaseResponse> getWardById( @RequestBody AddressRequest addressRequest) {
         iAddressService.createNewAddress(addressRequest);

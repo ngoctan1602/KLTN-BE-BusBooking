@@ -26,7 +26,7 @@ public class User {
     private String fullName;
     private Date birthDate;
     @OneToOne
-    @JoinColumn(name = "addressId")
+    @JoinColumn(name = "address_id")
     private Address address;
     @OneToMany(mappedBy = "user")
     private List<Bill> bills = new ArrayList<>();

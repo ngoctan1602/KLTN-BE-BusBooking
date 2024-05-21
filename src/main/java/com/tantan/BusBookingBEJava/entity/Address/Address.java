@@ -21,7 +21,7 @@ public class Address {
     private String road;
     private String fullName;
     @ManyToOne
-    @JoinColumn(name = "wardId")
+    @JoinColumn(name = "ward_id")
     private Ward ward;
     @OneToOne(mappedBy = "address")
     private BusStation busStation;

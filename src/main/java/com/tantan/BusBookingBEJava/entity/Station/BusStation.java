@@ -27,7 +27,7 @@ public class BusStation {
     private String name;
     private Status status;
     @OneToOne
-    @JoinColumn(name = "addressId")
+    @JoinColumn(name = "address_id")
     private Address address;
     @OneToMany(mappedBy = "busStation")
     private List<BusStop> busStops = new ArrayList<>();

@@ -27,7 +27,7 @@ public class Company {
     @Column(nullable = false)
     private String name;
     @OneToOne
-    @JoinColumn(name = "addressId")
+    @JoinColumn(name = "address_id")
     private Address address;
     private String logo;
     private Status status;

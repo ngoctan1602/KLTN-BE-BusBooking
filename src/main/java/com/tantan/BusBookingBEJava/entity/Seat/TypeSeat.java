@@ -28,6 +28,6 @@ public class TypeSeat {
     @OneToMany(mappedBy = "typeSeat")
     private List<Seat> seatList = new ArrayList<>();
     @ManyToOne
-    @JoinColumn(name = "companyId")
+    @JoinColumn(name = "company_id")
     private Company company;
 }

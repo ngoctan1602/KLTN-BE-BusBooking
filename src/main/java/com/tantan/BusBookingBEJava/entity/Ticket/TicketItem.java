@@ -19,12 +19,12 @@ public class TicketItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "ticketId")
+    @JoinColumn(name = "ticket_id")
     private Ticket ticket;
     @OneToOne
-    @JoinColumn(name = "seatId")
+    @JoinColumn(name = "seat_id")
     private Seat seat;
     @ManyToOne
-    @JoinColumn(name = "billId")
+    @JoinColumn(name = "bill_id")
     private Bill bill;
 }

@@ -23,14 +23,14 @@ public class Bill {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @ManyToOne
-    @JoinColumn(name = "discountId")
+    @JoinColumn(name = "discount_id")
     private Discount discount;
     @OneToMany(mappedBy = "bill")
     private List<TicketItem> ticketItem= new ArrayList<>();
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_id")
     private User user;
     @ManyToOne
-    @JoinColumn(name = "priceId")
+    @JoinColumn(name = "price_id")
     private Price price;
 }
