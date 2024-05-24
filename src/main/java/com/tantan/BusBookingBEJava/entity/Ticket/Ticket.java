@@ -1,6 +1,7 @@
 package com.tantan.BusBookingBEJava.entity.Ticket;
 
 import com.tantan.BusBookingBEJava.entity.Bus.Bus;
+import com.tantan.BusBookingBEJava.entity.Route.Route;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,4 +26,7 @@ public class Ticket {
     private Bus bus;
     @OneToMany(mappedBy = "ticket")
     private List<TicketItem> ticketItems = new ArrayList<>();
+    @ManyToOne
+    @JoinColumn(name = "route_id")
+    private Route route;
 }
