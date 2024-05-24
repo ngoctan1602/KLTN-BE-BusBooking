@@ -2,6 +2,7 @@ package com.tantan.BusBookingBEJava.entity.Route;
 
 import com.tantan.BusBookingBEJava.entity.Bus.Bus;
 import com.tantan.BusBookingBEJava.entity.Common.Status;
+import com.tantan.BusBookingBEJava.entity.Ticket.Ticket;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,4 +29,6 @@ public class Route {
     private List<BusStop> busStops = new ArrayList<>();
     @ManyToMany
     private List<Bus> busList = new ArrayList<>();
+    @OneToMany(mappedBy = "route")
+    private List<Ticket> tickets = new ArrayList<>();
 }

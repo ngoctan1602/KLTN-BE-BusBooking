@@ -25,7 +25,8 @@ public class Bus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
+//    private String name;
+    private String licensePlate;
     @OneToMany(mappedBy = "bus")
     private List<Seat> seatList = new ArrayList<>();
     @ManyToOne
