@@ -91,4 +91,19 @@ public class BusService implements IBusService {
                 )
         );
     }
+
+    @Override
+    public Bus getBusByIdAndRoute(long idBus, Route route) {
+        getBusById(idBus);
+        try {
+            Bus bus = busRepository.findByIdAndRoutes(idBus, route);
+            if (bus != null)
+                return bus;
+            throw new CustomException(
+                    new BaseResponse(true, HttpStatus.NOT_FOUND.value(), "Not found bus with id and route", null)
+            );
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
+    }
 }
