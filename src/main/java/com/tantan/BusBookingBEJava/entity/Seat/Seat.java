@@ -8,6 +8,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
@@ -24,6 +27,6 @@ public class Seat {
     @ManyToOne
     @JoinColumn(name = "bus_id")
     private Bus bus;
-    @OneToOne(mappedBy = "seat")
-    private TicketItem ticketItem;
+    @OneToMany(mappedBy = "seat")
+    private List<TicketItem> ticketItem= new ArrayList<>();
 }

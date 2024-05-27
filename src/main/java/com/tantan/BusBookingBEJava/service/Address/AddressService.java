@@ -4,8 +4,10 @@ import com.tantan.BusBookingBEJava.entity.Address.Address;
 import com.tantan.BusBookingBEJava.entity.Address.Ward;
 import com.tantan.BusBookingBEJava.exception.CustomException;
 import com.tantan.BusBookingBEJava.exception.ValidationException;
+import com.tantan.BusBookingBEJava.mapper.Address.AddressMapper;
 import com.tantan.BusBookingBEJava.repository.AddressRepository;
 import com.tantan.BusBookingBEJava.request.Address.AddressRequest;
+import com.tantan.BusBookingBEJava.response.Address.AddressResponse;
 import com.tantan.BusBookingBEJava.response.BaseRespone.BaseResponse;
 import com.tantan.BusBookingBEJava.service.Ward.IWardService;
 import jakarta.validation.ConstraintViolation;
@@ -51,5 +53,12 @@ public class AddressService implements IAddressService {
             throw new RuntimeException(e.getMessage());
         }
 
+    }
+
+    @Override
+    public AddressResponse mapRequestToResponse(Address address) {
+        AddressResponse addressResponse = AddressMapper.INSTANCE.toResponse(address);
+        addressResponse.setIdWard(address.getWard().getId());
+        return addressResponse;
     }
 }

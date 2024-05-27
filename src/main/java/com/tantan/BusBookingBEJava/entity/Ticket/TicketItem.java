@@ -21,7 +21,7 @@ public class TicketItem {
     @ManyToOne
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "seat_id")
     private Seat seat;
     @ManyToOne

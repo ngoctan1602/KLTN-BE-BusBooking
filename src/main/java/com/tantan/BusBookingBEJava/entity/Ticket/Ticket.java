@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +23,9 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    private Timestamp departureTime;//xuất bến
+    private Timestamp arrivalTime;// cập bến
+
     @ManyToOne
     @JoinColumn(name = "bus_id")
     private Bus bus;

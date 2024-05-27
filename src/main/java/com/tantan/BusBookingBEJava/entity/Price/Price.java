@@ -22,7 +22,7 @@ public class Price {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    //    value %
+    //  value %
     private int value;
     private String description;
     @ManyToOne
