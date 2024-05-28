@@ -1,6 +1,7 @@
 package com.tantan.BusBookingBEJava.entity.Price;
 
 import com.tantan.BusBookingBEJava.entity.Bill.Bill;
+import com.tantan.BusBookingBEJava.entity.Common.Status;
 import com.tantan.BusBookingBEJava.entity.Company.Company;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ public class Price {
     //  value %
     private int value;
     private String description;
+    private Status status;
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
